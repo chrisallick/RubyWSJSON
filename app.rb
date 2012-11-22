@@ -7,7 +7,7 @@ EventMachine.run {
     @channels = Hash.new{ |h,k| h[k] = { :channel => EM::Channel.new, :players => {} } }
     @data_resp = false
 
-    EventMachine::WebSocket.start(:host => "0.0.0.0", :port => 8881) do |ws|
+    EventMachine::WebSocket.start(:host => "0.0.0.0", :port => 8882) do |ws|
         def check_response(conn)
             if @data_resp == false
                 puts "ping/ponged out"
