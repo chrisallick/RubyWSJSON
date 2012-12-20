@@ -8,14 +8,15 @@ EventMachine.run {
     @data_resp = false
 
     EventMachine::WebSocket.start(:host => "0.0.0.0", :port => 8882) do |ws|
-        def check_response(conn)
-            if @data_resp == false
-                puts "ping/ponged out"
-                conn.close_connection
-            end
-        end
-
-        puts "sup?"
+        """
+            check response from deliberate ping/pong
+        """
+        # def check_response(conn)
+        #     if @data_resp == false
+        #         puts "ping/ponged out"
+        #         conn.close_connection
+        #     end
+        # end
 
         ws.onopen {
             puts "open"
@@ -28,6 +29,18 @@ EventMachine.run {
             else
                 puts "probably close this or something..."
             end
+
+            """
+                this can be used to create a more robust ping/pong check for clients
+            """
+            # timer = EM.add_periodic_timer(20) {
+            #     @data_resp = false
+            #     data = { :type => "ping" }.to_json
+            #     ws.send data
+            #     EM.add_timer(2) do
+            #         check_response(ws)
+            #     end
+            # }
 
             ws.onclose {
                 puts "close"
