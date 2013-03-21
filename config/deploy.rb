@@ -7,4 +7,4 @@ set :scm_passphrase, ""
 set :user, "ubuntu"
 
 server "54.245.111.204", :app, :primary => true
-set :deploy_to, "/home/ubuntu/RubyWSServer"
+set :deploy_to, "/var/www/RubyWSServer"
