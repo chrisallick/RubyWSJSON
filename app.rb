@@ -10,7 +10,7 @@ EventMachine.run {
 
     #@data_resp = false
 
-    EventMachine::WebSocket.start(:host => "0.0.0.0", :port => 8882) do |socket|
+    EventMachine::WebSocket.start(:host => "0.0.0.0", :port => 80) do |socket|
         socket.onopen {
             puts "open"
             @sockets << socket
