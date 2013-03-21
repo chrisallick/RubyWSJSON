@@ -24,6 +24,9 @@ EventMachine.run {
         socket.onclose {
             puts "close"
             @sockets.delete( socket )
+            if @sockets.length < 2
+                @channel.push "stop"
+            end
         }
 
         socket.onmessage { |msg|
