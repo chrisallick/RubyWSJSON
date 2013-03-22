@@ -2,44 +2,45 @@ require 'sinatra'
 require 'em-websocket'
 
 EventMachine.run {
-
-
-    #@channels = Hash.new{ |h,k| h[k] = { :channel => EM::Channel.new, :players => {} } }
-    @sockets = []
-    @channel = EM::Channel.new
-
-    #@data_resp = false
+    @channels = Hash.new{ |h,k| h[k] = { :channel => EM::Channel.new, :players => {} } }
 
     EventMachine::WebSocket.start(:host => "0.0.0.0", :port => 8882) do |socket|
+        sid = nil
+        roomname = nil
+        username = nil
+
+
         socket.onopen {
-            puts "open"
-            @sockets << socket
-            sid = @channel.subscribe{ |msg| socket.send msg }
-            socket.send "welcome,#{sid}"
-            if @sockets.length == 2
-                @channel.push "start"
+            roomname = socket.request["path"].split("/")[1]
+            username = socket.request["path"].split("/")[2]
+            if roomname and username
+                sid = @channels[roomname][:channel].subscribe{ |msg| socket.send msg }
+                @channels[roomname][:players][sid] = username
+
+                puts "open: #{sid}"
+
+                data = { :type => "welcome", :data => sid, :players => @channels[roomname][:players] }.to_json
+                socket.send data
+            else
+               socket.close_connection
             end
         }
 
         socket.onclose {
-            puts "close"
-            @sockets.delete( socket )
-            if @sockets.length < 2
-                @channel.push "stop"
-            end
+            @channels[roomname][:channel].unsubscribe(sid)
+            @channels[roomname][:players].delete(sid)
+
+            puts "close: #{sid}"
+
+            data = { :type => "leave", :players => @channels[roomname][:players], :data => sid }.to_json
+            @channels[roomname][:channel].push data
         }
 
         socket.onmessage { |msg|
-            #puts msg
+            puts msg
             begin
-                #message = JSON.parse( msg )
-                @sockets.each do |s|
-                    if s == socket
-                        #pass
-                    else
-                        s.send msg
-                    end
-                end
+                message = JSON.parse( msg )
+                @channels[roomname][:channel].push msg
             rescue Exception => e
                 puts "not JSON?"
                 puts e
