@@ -17,7 +17,7 @@ EventMachine.run {
                 sid = @channels[roomname][:channel].subscribe{ |msg| socket.send msg }
                 @channels[roomname][:players][sid] = username
 
-                puts "open: #{sid}"
+                puts "open: username:#{username}, roomname:#{roomname}, sid:#{sid}"
 
                 data = { :type => "welcome", :data => sid, :players => @channels[roomname][:players] }.to_json
                 socket.send data
@@ -30,14 +30,14 @@ EventMachine.run {
             @channels[roomname][:channel].unsubscribe(sid)
             @channels[roomname][:players].delete(sid)
 
-            puts "close: #{sid}"
+            puts "close: username:#{username}, roomname:#{roomname}, sid:#{sid}"
 
             data = { :type => "leave", :players => @channels[roomname][:players], :data => sid }.to_json
             @channels[roomname][:channel].push data
         }
 
         socket.onmessage { |msg|
-            puts msg
+            # puts msg
             begin
                 message = JSON.parse( msg )
                 @channels[roomname][:channel].push msg
