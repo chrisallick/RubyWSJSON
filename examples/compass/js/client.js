@@ -77,7 +77,7 @@ Client = function( _p, _options ) {
 
     this.parseMessage = function( msg ) {
         if( self.debug ) {
-            console.log( msg );  
+            console.log( msg );
         }
         if( msg["type"] ) {
             if( msg["type"] == "welcome" ) {

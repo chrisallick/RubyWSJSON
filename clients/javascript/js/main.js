@@ -6,7 +6,8 @@ $(document).ready(function(){
 		host: "54.245.111.204",
 		//host: "localhost",
 		port: "8882",
-		secure: false
+		secure: false,
+		debug: true
 	});
 
 	/*
