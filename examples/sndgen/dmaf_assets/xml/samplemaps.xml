@@ -1,0 +1,109 @@
+<samplemaps>
+	<samplemap name="drums">
+		<range sound="kick" root="Cs1" low="Cs1" hi="Cs1" vol="0"/>
+		<range sound="snare2" root="E1" low="E1" hi="E1" vol="0"/>
+		<range sound="snare1" root="F1" low="F1" hi="F1" vol="0"/>
+		<range sound="closedhihat" root="C2" low="C2" hi="C2" vol="0"/>
+		<range sound="openhihat" root="Cs2" low="Cs2" hi="Cs2" vol="-5"/>
+		<range sound="808hihat" root="D2" low="D2" hi="D2" vol="-5"/>
+    </samplemap>
+   	<samplemap name="pad1">
+		<range sound="pad1_D3" root="D3" low="C2" hi="F3" vol="0"/>
+		<range sound="pad1_G3" root="G3" low="Fs3" hi="B3" vol="0"/>
+		<range sound="pad1_D4" root="D4" low="C4" hi="F4" vol="0"/>
+		<range sound="pad1_G4" root="G4" low="Fs4" hi="B4" vol="0"/>
+		<range sound="pad1_D5" root="D5" low="C5" hi="Fs5" vol="0"/>
+    </samplemap>
+  	<samplemap name="pad2">
+		<range sound="pad2_A3" root="A3" low="C2" hi="B3" vol="0"/>
+		<range sound="pad2_D4" root="D4" low="C4" hi="E4" vol="0"/>
+		<range sound="pad2_G4" root="G4" low="F4" hi="B4" vol="0"/>
+		<range sound="pad2_D5" root="D5" low="C5" hi="Ds5" vol="0"/>
+		<range sound="pad2_F5" root="F5" low="E5" hi="Cs6" vol="0"/>
+     </samplemap>
+  	<samplemap name="harpgsp">
+		<range sound="harpgsp_Cs2" root="Cs2" low="F1" hi="D2" vol="0"/>
+		<range sound="harpgsp_E2" root="E2" low="Ds2" hi="F2" vol="0"/>
+		<range sound="harpgsp_G2" root="G2" low="Fs2" hi="Gs2" vol="0"/>
+		<range sound="harpgsp_A2" root="A2" low="A2" hi="AS2" vol="0"/>
+		<range sound="harpgsp_C3" root="C3" low="B2" hi="Cs3" vol="0"/>
+		<range sound="harpgsp_E3" root="E3" low="D3" hi="F3" vol="0"/>
+		<range sound="harpgsp_G3" root="G3" low="Fs3" hi="G3" vol="0"/>
+		<range sound="harpgsp_A3" root="A3" low="Gs3" hi="As3" vol="0"/>
+		<range sound="harpgsp_Cs4" root="Cs4" low="B3" hi="D4" vol="0"/>
+		<range sound="harpgsp_E4" root="E4" low="Ds4" hi="F4" vol="0"/>
+		<range sound="harpgsp_G4" root="G4" low="Fs4" hi="Gs4" vol="0"/>
+		<range sound="harpgsp_A4" root="A4" low="A4" hi="As4" vol="0"/>
+		<range sound="harpgsp_C5" root="C5" low="B4" hi="E6" vol="0"/>
+	</samplemap>
+	<samplemap name="vox">
+		<range sound="vox_Fs2" root="Fs2" low="Cs2" hi="Gs2" vol="0"/>
+		<range sound="vox_B2" root="B2" low="A2" hi="Cs3" vol="0"/>
+		<range sound="vox_E3" root="E3" low="D3" hi="F3" vol="0"/>
+		<range sound="vox_G3" root="G3" low="Fs3" hi="A3" vol="0"/>
+		<range sound="vox_B3" root="B3" low="As3" hi="Cs4" vol="0"/>
+		<range sound="vox_D4" root="D4" low="D4" hi="G4" vol="0"/>
+	</samplemap>
+	<samplemap name="moog_bass">
+		<range sound="moog_bass_A2" root="A2" low="Cs2" hi="F3" vol="0"/>
+		<range sound="moog_bass_A3" root="A3" low="Fs3" hi="Fs4" vol="0"/>
+	</samplemap>
+	<samplemap name="chopped_bass">
+		<range sound="chopped_bass_A2" root="A2" low="A2" hi="E3" vol="0"/>
+		<range sound="chopped_bass_A3" root="A3" low="F3" hi="As3" vol="0"/>
+	</samplemap>
+	<samplemap name="dirty_moog">
+		<range sound="dirty_moog_A2" root="A2" low="C2" hi="E3" vol="0"/>
+		<range sound="dirty_moog_A3" root="A3" low="F3" hi="C4" vol="0"/>
+	</samplemap>
+	<samplemap name="oberheim">
+		<range sound="oberheim_p3_1" root="C0" low="C0" hi="C0" vol="0"/>
+		<range sound="oberheim_p3_2" root="Cs0" low="Cs0" hi="Cs0" vol="0"/>
+		<range sound="oberheim_p3_3" root="D0" low="D0" hi="D0" vol="0"/>
+		<range sound="oberheim_p3_4" root="Ds0" low="Ds0" hi="Ds0" vol="0"/>
+		<range sound="oberheim_p3_5" root="E0" low="E0" hi="E0" vol="0"/>
+		<range sound="oberheim_p3_6" root="F0" low="F0" hi="F0" vol="0"/>
+		<range sound="oberheim_p3_7" root="Fs0" low="Fs0" hi="Fs0" vol="0"/>
+		<range sound="oberheim_p3_8" root="G0" low="G0" hi="G0" vol="0"/>
+		<range sound="oberheim_p3_9" root="Gs0" low="Gs0" hi="Gs0" vol="0"/>
+		<range sound="oberheim_p3_10" root="A0" low="A0" hi="A0" vol="0"/>
+		<range sound="oberheim_p3_11" root="As0" low="As0" hi="As0" vol="0"/>
+		<range sound="oberheim_p3_12" root="B0" low="B0" hi="B0" vol="0"/>
+		<range sound="oberheim_p3_13" root="C1" low="C1" hi="C1" vol="0"/>
+		<range sound="oberheim_p3_14" root="Cs1" low="Cs1" hi="Cs1" vol="0"/>
+		<range sound="oberheim_p3_15" root="D1" low="D1" hi="D1" vol="0"/>
+		<range sound="oberheim_p3_16" root="Ds1" low="Ds1" hi="Ds1" vol="0"/>
+		<range sound="oberheim_p4_1" root="E1" low="E1" hi="E1" vol="0"/>
+		<range sound="oberheim_p4_2" root="F1" low="F1" hi="F1" vol="0"/>
+		<range sound="oberheim_p4_3" root="Fs1" low="Fs1" hi="Fs1" vol="0"/>
+		<range sound="oberheim_p4_4" root="G1" low="G1" hi="G1" vol="0"/>
+		<range sound="oberheim_p4_5" root="Gs1" low="Gs1" hi="Gs1" vol="0"/>
+		<range sound="oberheim_p4_6" root="A1" low="A1" hi="A1" vol="0"/>
+		<range sound="oberheim_p4_7" root="As1" low="As1" hi="As1" vol="0"/>
+		<range sound="oberheim_p4_8" root="B1" low="B1" hi="B1" vol="0"/>
+		<range sound="oberheim_p4_9" root="C2" low="C2" hi="C2" vol="0"/>
+		<range sound="oberheim_p4_10" root="Cs2" low="Cs2" hi="Cs2" vol="0"/>
+		<range sound="oberheim_p4_11" root="D2" low="D2" hi="D2" vol="0"/>
+		<range sound="oberheim_p4_12" root="Ds2" low="Ds2" hi="Ds2" vol="0"/>
+		<range sound="oberheim_p4_13" root="E2" low="E2" hi="E2" vol="0"/>
+		<range sound="oberheim_p4_14" root="F2" low="F2" hi="F2" vol="0"/>
+		<range sound="oberheim_p4_15" root="Fs2" low="Fs2" hi="Fs2" vol="0"/>
+		<range sound="oberheim_p4_16" root="G2" low="G2" hi="G2" vol="0"/>
+	</samplemap>
+	<samplemap name="synth_arp">
+		<range sound="synth_arp_D1" root="D1" low="C0" hi="Fs1" vol="0"/>
+		<range sound="synth_arp_G1" root="G1" low="G1" hi="B1" vol="0"/>
+		<range sound="synth_arp_C2" root="C2" low="C2" hi="E2" vol="0"/>
+		<range sound="synth_arp_F2" root="F2" low="F2" hi="A2" vol="0"/>
+		<range sound="synth_arp_As2" root="As2" low="As2" hi="D3" vol="0"/>
+		<range sound="synth_arp_Ds3" root="Ds3" low="Ds3" hi="G3" vol="0"/>
+		<range sound="synth_arp_Gs3" root="Gs3" low="Gs3" hi="C4" vol="0"/>
+		<range sound="synth_arp_Cs4" root="Cs4" low="Cs4" hi="F4" vol="0"/>
+		<range sound="synth_arp_Fs4" root="Fs4" low="Fs4" hi="As4" vol="0"/>
+		<range sound="synth_arp_B4" root="B4" low="B4" hi="Ds5" vol="0"/>
+		<range sound="synth_arp_E5" root="E5" low="E5" hi="Gs5" vol="0"/>
+		<range sound="synth_arp_A5" root="A5" low="A5" hi="Cs6" vol="0"/>
+		<range sound="synth_arp_D6" root="D6" low="D6" hi="Fs6" vol="0"/>
+		<range sound="synth_arp_G6" root="G6" low="G6" hi="C7" vol="0"/>
+	</samplemap>
+</samplemaps>
