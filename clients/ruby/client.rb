@@ -1,3 +1,23 @@
+@@events = {}
+
+def addEvent( event, type, function )
+    @@events[event] = {}
+    @@events[event]["type"] = type
+    @@events[event]["function"] = function 
+end
+
+addEvent("compass", String, lambda{|msg|
+    puts "#{msg} world"
+})
+
+msg = "hello"
+event = "compass"
+type = String
+
+if (@@events.has_key? event) and (msg.is_a? @@events[event]["type"])
+    @@events["compass"]["function"].call msg
+end
+
 EM.epoll
 EM.run do
     trap("TERM") { stop }
