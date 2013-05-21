@@ -19,24 +19,16 @@
 					debug: false
 				});
 
-                var lastHeading = 0;
-                var heading = 0;
-                window.addEventListener('deviceorientation', function(e) {
-                	var msg = client.createMessage("compass",{
-                		a:e.alpha,
-                		b:e.beta,
-                		g:e.gamma,
-                		h:e.webkitCompassHeading
+				window.addEventListener("devicemotion", function(e){
+                	var msg = client.createMessage("accelerometer",{
+                		x:e.acceleration.x,
+                		y:e.acceleration.y,
+                		z:e.acceleration.z,
                 	});
                 	client.sendMessage(msg);
-                }, false);
+				}, !1)
 
 				client.connect();
-
-				$("#wrapper").click(function(){
-                	var msg = client.createMessage("direction","center");
-                	client.sendMessage(msg);
-				});
 			});
 		</script>
 	</head>
