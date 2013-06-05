@@ -1,0 +1,40 @@
+<html>
+	<head>
+        <link href='./css/reset.css' media='all' rel='stylesheet' type='text/css' />
+        <link href='./css/main.css' media='all' rel='stylesheet' type='text/css' />
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript" src="./js/vendor/reconnecting-ws.min.js"></script>
+		<script type="text/javascript" src="./js/client.js"></script>
+		<script>
+			var client;
+			$(document).ready(function(){
+				client = new Client( window, {
+					username: "sender",
+					roomname: "compass_demo",
+					host: "54.245.111.204",
+					//host: "10.0.1.2",
+					port: "8882",
+					secure: false,
+					debug: false
+				});
+
+				window.addEventListener("devicemotion", function(e){
+                	var msg = client.createMessage("accelerometer",{
+                		x:e.acceleration.x,
+                		y:e.acceleration.y,
+                		z:e.acceleration.z,
+                	});
+                	client.sendMessage(msg);
+				}, !1)
+
+				client.connect();
+			});
+		</script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<p id="direction"></p>
+		</div>
+	</body>
+</html

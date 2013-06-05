@@ -37,7 +37,7 @@ EventMachine.run {
         }
 
         socket.onmessage { |msg|
-            # puts msg
+            puts msg
             begin
                 message = JSON.parse( msg )
                 @channels[roomname][:channel].push msg
